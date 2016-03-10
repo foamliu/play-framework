@@ -11,7 +11,7 @@ RUN chown -R play:play /home/play/Code
 ENV ACTIVATOR_VERSION 1.3.7
 
 RUN yum install -y git 
-RUN yum install -y build-essential 
+RUN yum install -y make 
 RUN yum install -y curl 
 RUN yum install -y wget 
 RUN yum install -y zip 
