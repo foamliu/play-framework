@@ -16,7 +16,15 @@ RUN yum install -y curl
 RUN yum install -y wget 
 RUN yum install -y zip 
 RUN yum install -y unzip
+RUN yum install npm
 WORKDIR /tmp
+
+# Install play
+RUN wget http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VERSION}/typesafe-activator-${ACTIVATOR_VERSION}.zip && \
+    unzip typesafe-activator-${ACTIVATOR_VERSION}.zip && \
+    mv activator-dist-${ACTIVATOR_VERSION} /opt/activator && \
+    chown -R play:play /opt/activator && \
+    rm typesafe-activator-${ACTIVATOR_VERSION}.zip
 
 # Change user, launch bash
 USER play
