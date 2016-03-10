@@ -4,7 +4,6 @@ MAINTAINER Foam Liu <foamliu@yeah.net>
 # Create editor userspace
 RUN groupadd play
 RUN useradd play -m -g play -s /bin/bash
-RUN passwd -u play
 RUN echo "play ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/play
 RUN chmod 0440 /etc/sudoers.d/play
 RUN mkdir /home/play/Code
