@@ -16,7 +16,7 @@ RUN yum install -y curl
 RUN yum install -y wget 
 RUN yum install -y zip 
 RUN yum install -y unzip
-RUN yum install npm
+
 WORKDIR /tmp
 
 # Install play
