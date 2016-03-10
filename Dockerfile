@@ -5,8 +5,8 @@ MAINTAINER Foam Liu <foamliu@yeah.net>
 RUN groupadd play
 RUN useradd play -m -g play -s /bin/bash
 RUN passwd -d play
-RUN echo "play ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/play
-RUN chmod 0440 /etc/sudoers.d/play
+RUN sudo echo "play ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/play
+RUN sudo chmod 0440 /etc/sudoers.d/play
 RUN mkdir /home/play/Code
 RUN chown -R play:play /home/play/Code
 
