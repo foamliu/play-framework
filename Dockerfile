@@ -6,7 +6,7 @@ ENV ACTIVATOR_VERSION 1.3.7
 
 RUN yum install -y epel-release
 RUN yum install -y git make curl wget zip unzip
-RUN yum install -y java-1.8.0-openjdk
+RUN yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
 RUN yum install -y nodejs npm
 # Define JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
